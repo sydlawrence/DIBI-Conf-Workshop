@@ -1,60 +1,58 @@
 # Useful URLs
 
-## Spotify docs
+*Spotify docs*
 https://developer.spotify.com/technologies/apps/docs/beta/
 
-## Spotify css
+*Spotify css*
 https://gist.github.com/1772337
 
-## Echonest docs
+*Echonest docs*
 http://developer.echonest.com/docs/v4
 
-## Test track uri
+*Test track uri*
 spotify:track:6JEK0CvvjDjjMUBFoXShNZ
 
 ================================================================================================
 
 # Agenda
 
-## Assess skills
+- Assess skills
 
-------------------------------------------------------------------------------------------------
+- Setup a simple html app
 
-## Setup a simple html app
+- Play a song
 
-## Play a song
+- Create a new playlist
 
-## Create a new playlist
+- Display a playlist as cover
 
-## Display a playlist as cover
+- Display a playlist as a list
 
-## Display a playlist as a list
+- Use echonest to find information about a song
 
-## Use echonest to find information about a song
+- Use echonest to find similar songs
 
-## Use echonest to find similar songs
+- Use echonest to search for songs
 
-## Use echonest to search for songs
+- Get the user's starred tracks
 
-## Get the user's starred tracks
+- Display as a list
 
-## Display as a list
+- Get the user's library artists
 
-## Get the user's library artists
+- Display as a list
 
-## Display as a list
+- Get the users library tracks
 
-## Get the users library tracks
+- Display as a list
 
-## Display as a list
+- Login to facebook
 
-## Login to facebook
+- Get playing history from facebook
 
-## Get playing history from facebook
+- Drop a track onto the icon
 
-## Drop a track onto the icon
-
-## Let's Make Something! :)
+- Let's Make Something! :)
 
 
 ================================================================================================
@@ -110,7 +108,7 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
 ## Accessing the spotify api
 
         var spotify = getSpotifyApi(1),
-        	models = spotify.require('sp://import/scripts/api/models'),
+                models = spotify.require('sp://import/scripts/api/models'),
         	views = spotify.require('sp://import/scripts/api/views'),
         	ui = spotify.require("sp://import/scripts/ui"),
         	player = models.player,
