@@ -55,6 +55,7 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
 19. Drop a track onto the icon
 
 20. Let's Make Something! :)
+
 -	Analyze playing history?
 	- Analyze starred tracks?
 
