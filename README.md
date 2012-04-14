@@ -55,10 +55,12 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
 19. Drop a track onto the icon
 
 20. Let's Make Something! :)
--	Analyze playing history?
--	Analyze starred tracks?
 
-21. Pub for soft drinks or alcholic ones depends on users preference.
+21. Analyze playing history
+
+22. Analyze playing stats
+
+23. Pub for soft drinks or alcholic ones depends on users preference.
 
 - - -
 
