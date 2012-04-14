@@ -1,61 +1,66 @@
 # Useful URLs
 
-*Spotify docs*
+**Spotify docs**
 https://developer.spotify.com/technologies/apps/docs/beta/
 
-*Spotify css*
+**Spotify css**
 https://gist.github.com/1772337
 
-*Echonest docs*
+**Echonest docs**
 http://developer.echonest.com/docs/v4
 
-*Test track uri*
+**Test track uri**
 spotify:track:6JEK0CvvjDjjMUBFoXShNZ
 
-================================================================================================
+= = =
 
 # Agenda
 
-- Assess skills
+1. Assess skills
 
-- Setup a simple html app
+2. Setup a simple html app
 
-- Play a song
+3. Play a song
 
-- Create a new playlist
+4. Create a new playlist
 
-- Display a playlist as cover
+5. Display a playlist as cover
 
-- Display a playlist as a list
+6. Display a playlist as a list
 
-- Use echonest to find information about a song
+7. Use echonest to find information about a song
 
-- Use echonest to find similar songs
+8. Use echonest to find similar songs
 
-- Use echonest to search for songs
+9. Use echonest to search for songs
 
-- Get the user's starred tracks
+10. Search Spotify for songs
 
-- Display as a list
+11. Get the user's starred tracks
 
-- Get the user's library artists
+12. Display as a list
 
-- Display as a list
+13. Get the user's library artists
 
-- Get the users library tracks
+14. Display as a list
 
-- Display as a list
+15. Get the users library tracks
 
-- Login to facebook
+16. Display as a list
 
-- Get playing history from facebook
+17. Login to facebook
 
-- Drop a track onto the icon
+18. Get playing history from facebook
 
-- Let's Make Something! :)
+19. Drop a track onto the icon
 
+20. Let's Make Something! :)
+-        Analyze playing history?
+	- Analyze starred tracks?
 
-================================================================================================
+21. Pub for soft drinks or alcholic ones depends on users preference.
+
+= = =
 
 # Bits of code
 
@@ -83,7 +88,7 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
                 ],
         }
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Accessing the default styling
 
@@ -103,12 +108,12 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
         player.css
         popover.css
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Accessing the spotify api
 
         var spotify = getSpotifyApi(1),
-                models = spotify.require('sp://import/scripts/api/models'),
+        	models = spotify.require('sp://import/scripts/api/models'),
         	views = spotify.require('sp://import/scripts/api/views'),
         	ui = spotify.require("sp://import/scripts/ui"),
         	player = models.player,
@@ -121,7 +126,65 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
         var tracker = new googletracker.GoogleTracker("UA-19804545-13");
         tracker.track("app");
 
-------------------------------------------------------------------------------------------------
+- - -
+
+## Tracks
+
+        track = models.Track.fromURI(uri, function(track) {
+            console.log("Track loaded", track.name);
+        });
+
+- - -
+
+## Accessing the player
+
+        // get the current track
+        var currentTrack = models.player.track;
+
+        // play a track 
+        player.play(track.uri);
+
+        player.observe(models.EVENT.CHANGE, function(event) {
+                console.log("Something changed!");
+        });
+
+- - -
+
+## Playlists
+
+        // creating a playlist ( adding a title saves the playlist )
+        playlist = new models.Playlist(title);
+
+        playlist.add(track);
+
+- - -
+
+## Showing cover images for playlists
+
+This only works with playlists or albums, not of individual tracks
+
+        var playerView = new views.Player();
+        playerView.track = null; // Don't play the track right away
+
+        // add a playlist to the player
+        playerView.context = playlist;
+
+        // the html
+        playerView.node
+
+- - -
+
+## Showing a list view for playlists
+
+This only works with playlists or albums, not of individual tracks
+
+        var playlistView = new views.List(playlist);
+        //playlistView.itemHeight = "30";
+
+        // the html
+        playlistView.node;
+
+- - -
 
 ## Accessing echonest api
 
@@ -185,7 +248,7 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
         mode
         key
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Searching spotify for songs
 
@@ -213,71 +276,13 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
         // start the search
         search.appendNext();
 
-------------------------------------------------------------------------------------------------
-
-## Accessing the player
-
-        // get the current track
-        var currentTrack = models.player.track;
-
-        // play a track 
-        player.play(track.uri);
-
-        player.observe(models.EVENT.CHANGE, function(event) {
-                console.log("Something changed!");
-        });
-
-------------------------------------------------------------------------------------------------
-
-## Tracks
-
-        track = models.Track.fromURI(uri, function(track) {
-            console.log("Track loaded", track.name);
-        });
-
-------------------------------------------------------------------------------------------------
-
-## Playlists
-
-        // creating a playlist ( adding a title saves the playlist )
-        playlist = new models.Playlist(title);
-
-        playlist.add(track);
-
-------------------------------------------------------------------------------------------------
-
-## Showing cover images for playlists
-
-This only works with playlists or albums, not of individual tracks
-
-        var playerView = new views.Player();
-        playerView.track = null; // Don't play the track right away
-
-        // add a playlist to the player
-        playerView.context = playlist;
-
-        // the html
-        playerView.node
-
-------------------------------------------------------------------------------------------------
-
-## Showing a list view for playlists
-
-This only works with playlists or albums, not of individual tracks
-
-        var playlistView = new views.List(playlist);
-        //playlistView.itemHeight = "30";
-
-        // the html
-        playlistView.node;
-
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Get a playlist of user's starred tracks
 
         library.starredPlaylist
 
-------------------------------------------------------------------------------------------------   
+- - -   
 
 ## Get a playlist of all user's tracks
 
@@ -288,7 +293,7 @@ Takes quite a while
                 playlist.add(library.tracks[i]);
         }
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Log the user into facebook
 
@@ -310,7 +315,7 @@ Takes quite a while
                 }
         });
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Get the users listening history
 
@@ -346,7 +351,7 @@ add *.facebook.com to manifest
                 }
         });
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Dropping things onto the icon
 
@@ -355,13 +360,13 @@ add *.facebook.com to manifest
             console.log(links);
         });
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Licencing Issues
 
         track.availableForPlayback
 
-------------------------------------------------------------------------------------------------
+- - -
 
 ## Adverts
 
