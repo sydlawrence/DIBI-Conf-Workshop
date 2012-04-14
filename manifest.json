@@ -1,0 +1,23 @@
+{        
+        "BundleType": "Application",
+        "BundleVersion": "1.0.2",
+        "AppIcon": {
+                "36x18": "app-icon.png"
+        },
+        "AppName": {
+                "en": "Dibiapp"
+        },
+        "SupportedLanguages": [
+                "en"
+        ],
+        "RequiredPermissions": [
+                "http://*.echonest.com",
+                "http://*.spotify.com",
+                "http://*.twitter.com",
+                "http://*.facebook.com",
+                "https://*.facebook.com"
+        ],
+        "AcceptedLinkTypes":[
+                "track"
+        ],
+}
