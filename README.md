@@ -12,7 +12,7 @@ http://developer.echonest.com/docs/v4
 **Test track uri**
 spotify:track:6JEK0CvvjDjjMUBFoXShNZ
 
-= = =
+- - -
 
 # Agenda
 
@@ -55,12 +55,12 @@ spotify:track:6JEK0CvvjDjjMUBFoXShNZ
 19. Drop a track onto the icon
 
 20. Let's Make Something! :)
--        Analyze playing history?
+-	Analyze playing history?
 	- Analyze starred tracks?
 
 21. Pub for soft drinks or alcholic ones depends on users preference.
 
-= = =
+- - -
 
 # Bits of code
 
