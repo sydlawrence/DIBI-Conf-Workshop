@@ -1,4 +1,6 @@
 # Useful URLs
+**This repo**
+http://github.com/sydlawrence/DIBI-Conf-Workshop.
 
 **Spotify docs**
 https://developer.spotify.com/technologies/apps/docs/beta/
