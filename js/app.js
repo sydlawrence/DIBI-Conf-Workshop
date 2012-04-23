@@ -99,6 +99,7 @@ $(document).ready(function() {
 
 
 var uri = "spotify:track:6JEK0CvvjDjjMUBFoXShNZ";
+
 //player.play(uri);
 
 
